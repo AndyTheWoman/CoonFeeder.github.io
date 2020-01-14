@@ -1,1 +1,36 @@
-
+<script type="text/javascript">
+  var garbagecount = 0;
+  </script>
+<html>
+<head><title>Coon Feeder</title></head>
+<body>
+      <a href=# onclick="add()"><img src="Michael%20Racoon.png"></a>
+  <br><br> 
+  You donated:
+  <input type="text" id="text" disabled style=text-align:center>
+  <script type="text/javascript">
+  function add(){
+   garbagecount = garbagecount + 1
+   document.getElementById('text').value = garbagecount; 
+   document.title = garabagecount + "garbage"; 
+     } 
+  </script>
+   Garbage
+   <br><br>
+      
+      <button><a href="#" onClick="save()">Save</a></button> 
+    <button><a href="#" onClick="load()">Load</a></button>
+      
+    <script type="text/javascript"> 
+    function save(){ 
+      localStorage.setItem("garbagecount", garbagecount); 
+    }  
+    function load(){
+        garbagecount = localstorage.getItem("garbagecount"); 
+        garbagecount = parseInt(garbagecount);
+        document.getElementById('text').value = garbagecount;
+        document.title = garbagecount + "garbagecount"; 
+    }  
+    </script>
+  </body>
+  </html> 
